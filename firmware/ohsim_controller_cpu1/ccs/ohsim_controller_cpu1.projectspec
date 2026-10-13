@@ -1,0 +1,33 @@
+<projectSpec>
+  <project
+        name="ohsim_controller_cpu1"
+        device="TMS320F28379D"
+        cgtVersion="22.6.1.LTS"
+        outputFormat="ELF"
+        launchWizard="False"
+        linkerCommandFile=""
+        enableSysConfigTool="false">
+
+    <configuration
+        name="CPU1_RAM"
+        compilerBuildOptions="--opt_level=off -I${PROJECT_ROOT}/device -I${PROJECT_ROOT}/device/driverlib --define=CPU1 --define=_LAUNCHXL_F28379D -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --diag_warning=225 --diag_suppress=10063 --display_error_number"
+        linkerBuildOptions="--entry_point code_start --stack_size=0x200" />
+
+    <configuration
+        name="CPU1_FLASH"
+        compilerBuildOptions="--opt_level=off -I${PROJECT_ROOT}/device -I${PROJECT_ROOT}/device/driverlib --define=CPU1 --define=_LAUNCHXL_F28379D --define=_FLASH -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --diag_warning=225 --diag_suppress=10063 --display_error_number"
+        linkerBuildOptions="--entry_point code_start --stack_size=0x200" />
+
+    <file action="copy" path="../vendor/ti/device/driverlib.h" targetDirectory="device" />
+    <file action="copy" path="../vendor/ti/device/device.h" targetDirectory="device" />
+    <file action="copy" path="../vendor/ti/device/device.c" targetDirectory="device" />
+    <file action="copy" path="../vendor/ti/device/F2837xD_CodeStartBranch.asm" targetDirectory="device" />
+    <file action="copy" path="../vendor/ti/targetConfigs/TMS320F28379D.ccxml" targetDirectory="targetConfigs" />
+    <file action="copy" path="../vendor/ti/linker/2837xD_RAM_lnk_cpu1.cmd" targetDirectory="" applicableConfigurations="CPU1_RAM" />
+    <file action="copy" path="../vendor/ti/linker/2837xD_FLASH_lnk_cpu1.cmd" targetDirectory="" applicableConfigurations="CPU1_FLASH" />
+    <file action="copy" path="../vendor/ti/driverlib/" targetDirectory="device" excludeFromBuild="True" />
+    <file action="link" path="../vendor/ti/driverlib/lib/driverlib.lib" targetDirectory="" />
+
+    <file action="link" path="../src/" targetDirectory="" />
+  </project>
+</projectSpec>

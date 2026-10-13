@@ -1,0 +1,56 @@
+# Material de armado local (assets del release)
+/_release/
+
+# Vivado: el proyecto se recrea con fpga/scripts/create_project.tcl
+fpga/vivado_project/
+fpga/reports/
+fpga/sim_xsim/
+.Xil/
+*.jou
+*.log
+*.str
+*.wdb
+*.pb
+xsim.dir/
+webtalk*
+
+# CCS
+.metadata/
+.settings/
+.launches/
+Debug/
+Release/
+CPU1_RAM/
+CPU1_FLASH/
+*.obj
+*.out
+*.map
+*.d
+
+# Capturas generadas por el host y caches de Python
+firmware/captures/
+__pycache__/
+*.pyc
+
+# MATLAB y Simulink
+matlab/output/
+matlab/modelado_rtl/output/
+slprj/
+*.slxc
+*.asv
+*.autosave
+
+# KiCad
+*-backups/
+fp-info-cache
+*.kicad_prl
+*.bak
+*.lck
+_autosave-*
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,23 @@
+* text=auto
+
+# Archivos que Windows necesita con CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Scripts de shell con LF para que bash los ejecute tambien en Windows
+*.sh text eol=lf
+
+# Binarios
+*.slx binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.pdf binary
+*.lib binary
+*.step binary
+*.STEP binary
+*.wrl binary
+*.xlsx binary
+*.bit binary
+*.ltx binary

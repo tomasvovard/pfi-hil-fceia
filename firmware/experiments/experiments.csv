@@ -1,0 +1,25 @@
+test_id,test_name,phase,order,duty_ppm,load_gray,hold_us,trigger,notes
+11,e1a_duty_045_046,PRECONDITION,0,450000,00,0,NONE,Wait for stable initial operating point
+11,e1a_duty_045_046,PRETRIGGER,1,450000,00,2000,NONE,Viewing interval before step
+11,e1a_duty_045_046,STEP,2,460000,00,332000,DUTY,Positive duty step
+12,e1b_duty_046_045,PRECONDITION,0,460000,00,0,NONE,Wait for stable initial operating point
+12,e1b_duty_046_045,PRETRIGGER,1,460000,00,2000,NONE,Viewing interval before step
+12,e1b_duty_046_045,STEP,2,450000,00,332000,DUTY,Negative duty step
+2,load_25_16p6,PRECONDITION,0,300000,01,0,NONE,Wait for stable initial operating point
+2,load_25_16p6,PRETRIGGER,1,300000,01,2000,NONE,Viewing interval before step
+2,load_25_16p6,STEP,2,300000,00,332000,LOAD,Connect additional numerical load
+31,e3a_duty_080_081,PRECONDITION,0,800000,01,0,NONE,Wait for stable initial operating point
+31,e3a_duty_080_081,PRETRIGGER,1,800000,01,2000,NONE,Viewing interval before step
+31,e3a_duty_080_081,STEP,2,810000,01,600000,DUTY,Positive duty step
+32,e3b_duty_081_080,PRECONDITION,0,810000,01,0,NONE,Wait for stable initial operating point
+32,e3b_duty_081_080,PRETRIGGER,1,810000,01,2000,NONE,Viewing interval before step
+32,e3b_duty_081_080,STEP,2,800000,01,600000,DUTY,Negative duty step
+41,e4a_load_50_25,PRECONDITION,0,700000,11,0,NONE,Wait for stable initial operating point
+41,e4a_load_50_25,PRETRIGGER,1,700000,11,2000,NONE,Viewing interval before step
+41,e4a_load_50_25,STEP,2,700000,01,600000,LOAD,Load step from 50 ohm to 25 ohm
+42,e4b_load_25_16p6,PRECONDITION,0,700000,01,0,NONE,Wait for stable initial operating point
+42,e4b_load_25_16p6,PRETRIGGER,1,700000,01,2000,NONE,Viewing interval before step
+42,e4b_load_25_16p6,STEP,2,700000,00,332000,LOAD,Load step from 25 ohm to 16.6 ohm
+5,load_16p6_25,PRECONDITION,0,700000,00,0,NONE,Wait for stable initial operating point
+5,load_16p6_25,PRETRIGGER,1,700000,00,2000,NONE,Viewing interval before step
+5,load_16p6_25,STEP,2,700000,01,600000,LOAD,Disconnect one numerical load branch
